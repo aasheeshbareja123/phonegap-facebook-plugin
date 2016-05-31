@@ -121,6 +121,9 @@ if (cordova.platformId == "browser") {
                 }
             }
         },
+        activate: function(s, f) {
+            exec(s, f, "FacebookConnectPlugin", "activate", []);
+        },
 
         api: function (graphPath, permissions, s, f) {
             // JS API does not take additional permissions
